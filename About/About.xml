@@ -6,8 +6,10 @@
 		<li>1.1</li>
 	</supportedVersions>
   <packageId>Inggo.ElectricBrazier</packageId>
-	<description>Provides an Electric Brazier that satisfies throne room requirements.</description>
-  <url>https://ludeon.com/forums/index.php?topic=32980.0</url>
+	<description>Provides an Electric Brazier that satisfies throne room requirements. 
+  Requires Royalty DLC installed. 
+  May not work for custom Empires and Royalty Titles.</description>
+  <url>https://github.com/Inggo/RimWorld.ElectricBraziers</url>
   <modDependencies>
     <li>
       <packageId>Ludeon.RimWorld.Royalty</packageId>
