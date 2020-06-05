@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="FurnitureBase">
+    <defName>ElectricBrazier</defName>
+    <label>electric brazier</label>
+    <description>An electricity-powered brazier. Looks and feels like the real thing.</description>
+    <category>Building</category>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>100</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Mass>15</Mass>
+    </statBases>
+    <selectable>true</selectable>
+    <designationCategory>Furniture</designationCategory>
+    <uiIconOffset>(0, -0.04)</uiIconOffset>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>50</costStuffCount>
+    <placeWorkers>
+      <li>PlaceWorker_Heater</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>90</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>3.5</heatPerSecond>
+        <heatPushMaxTemperature>23</heatPushMaxTemperature>
+      </li>
+      <li Class="CompProperties_PoweredFireOverlay">
+        <fireSize>1</fireSize>
+        <offset>(0,0,0.18)</offset>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+    <canOverlapZones>false</canOverlapZones>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <rotatable>false</rotatable>
+    <researchPrerequisites>
+      <li>ComplexFurniture</li>
+      <li>Electricity</li>
+    </researchPrerequisites>
+    <graphicData>
+      <texPath>Things/Building/Misc/Brazier</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <shadowData>
+        <volume>(0.55, 0.35, 0.3)</volume>
+        <offset>(0, 0, -0.28)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.3,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+  </ThingDef>
+</Defs>
