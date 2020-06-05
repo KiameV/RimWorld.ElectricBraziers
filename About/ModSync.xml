@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModSyncNinjaData>
-  <ModName>ElectricBrazier</ModName>
+  <ID></ID>
+  <ModName>Electric Braziers</ModName>
   <Version>1.0</Version>
   <SaveBreaking>False</SaveBreaking>
   <Host name="Github">
     <Owner>Inggo</Owner>
-    <Project>RimWorld.ElectricBrazier</Project>
+    <Project>RimWorld.ElectricBraziers</Project>
+    <AboutDir>About</AboutDir>
     <DownloadFrom>ModSyncReleases</DownloadFrom>
     <Branch>master</Branch>
   </Host>

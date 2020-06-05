@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Electric Brazier</name>
+	<name>Electric Braziers</name>
 	<author>Inggo</author>
 	<supportedVersions>
 		<li>1.1</li>
 	</supportedVersions>
-  <packageId>Inggo.ElectricBrazier</packageId>
+  <packageId>Inggo.ElectricBraziers</packageId>
 	<description>Provides an Electric Brazier that satisfies throne room requirements. 
   Requires Royalty DLC installed. 
   May not work for custom Empires and Royalty Titles.</description>
