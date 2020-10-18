@@ -11,6 +11,12 @@
   Requires Royalty DLC installed. 
   May not work for custom Empires and Royalty Titles.</description>
   <url>https://github.com/Inggo/RimWorld.ElectricBraziers</url>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>brrainz.harmony</li>
+    <li>OskarPotocki.VanillaExpanded.RoyaltyPatches</li>
+  </loadAfter>
   <modDependencies>
     <li>
       <packageId>Ludeon.RimWorld.Royalty</packageId>
