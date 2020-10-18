@@ -105,7 +105,7 @@ namespace RimWorld
 
 			if (flag)
 			{
-				text = this.labelKey.Translate();
+				text = this.labelKey.Translate().ToString();
 			}
 			
 			if (r != null)
