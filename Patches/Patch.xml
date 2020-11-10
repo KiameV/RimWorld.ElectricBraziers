@@ -4,29 +4,70 @@
     <mods>
       <li>Vanilla Expanded - Royalty Patches</li>
     </mods>
-    <match Class="PatchOperationReplace">
-      <xpath>Defs/RoyalTitleDef[defName="Knight" or defName="Praetor" or defName="Baron" or defName="Count" or @Name="BaseEmpireTitleNPC"]/throneRoomRequirements//li[5]</xpath>
-      <value>
-        <li Class="VERP.RoomRequirement_ThingAnyOfCount">
-          <things>
-            <li>Brazier</li>
-            <li>ElectricBrazier</li>
-          </things>
-          <count>2</count>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/RoyalTitleDef[defName="Esquire"]/throneRoomRequirements//li[4]</xpath>
+          <value>
+            <li Class="VERP.RoomRequirement_ThingAnyOfCount">
+              <things>
+                <li>Brazier</li>
+                <li>ElectricBrazier</li>
+              </things>
+              <count>2</count>
+            </li>
+          </value>
         </li>
-      </value>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/RoyalTitleDef[defName="Knight" or defName="Praetor" or defName="Baron" or defName="Count" or @Name="BaseEmpireTitleNPC"]/throneRoomRequirements//li[5]</xpath>
+          <value>
+            <li Class="VERP.RoomRequirement_ThingAnyOfCount">
+              <things>
+                <li>Brazier</li>
+                <li>ElectricBrazier</li>
+              </things>
+              <count>2</count>
+            </li>
+          </value>
+         </li>
+      </operations>
     </match>
-    <nomatch Class="PatchOperationreplace">
-      <xpath>/Defs/RoyalTitleDef[defName="Knight" or defName="Praetor" or defName="Baron" or defName="Count" or @Name="BaseEmpireTitleNPC"]/throneRoomRequirements//li[5]</xpath>
-      <value>
-        <li Class="RoomRequirement_ThingCountAnyOf">
-          <things>
-            <li>Brazier</li>
-            <li>ElectricBrazier</li>
-          </things>
-          <count>2</count>
+    <nomatch Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/RoyalTitleDef[defName="Esquire"]/throneRoomRequirements//li[4]</xpath>
+          <value>
+            <li Class="RoomRequirement_ThingCountAnyOf">
+              <things>
+                <li>Brazier</li>
+                <li>ElectricBrazier</li>
+              </things>
+              <count>2</count>
+            </li>
+          </value>
         </li>
-      </value>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/RoyalTitleDef[defName="Knight" or defName="Praetor" or defName="Baron" or defName="Count" or @Name="BaseEmpireTitleNPC"]/throneRoomRequirements//li[5]</xpath>
+          <value>
+            <li Class="RoomRequirement_ThingCountAnyOf">
+              <things>
+                <li>Brazier</li>
+                <li>ElectricBrazier</li>
+              </things>
+              <count>2</count>
+            </li>
+          </value>
+         </li>
+      </operations>
     </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RoyalTitleDef[defName="Esquire" or defame="Knight" or defName="Praetor" or defName="Baron" or defName="Count" or @Name="BaseEmpireTitleNPC"]/throneRoomRequirements</xpath>
+    <value>
+      <li Class="RoomRequirement_AllThingsAreGlowing">
+        <labelKey>RoomRequirementAllBraziersMustBeLit</labelKey>
+        <thingDef>ElectricBrazier</thingDef>
+      </li>
+    </value>
   </Operation>
 </Patch>
