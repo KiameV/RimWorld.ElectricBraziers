@@ -17,7 +17,7 @@
       </value>
     </match>
     <nomatch Class="PatchOperationreplace">
-      <xpath>/Defs/RoyalTitleDef[defName="Esquire" or defName="Knight" or defName="Praetor" or defName="Baron" or defName="Count" or @Name="BaseEmpireTitleNPC"]/throneRoomRequirements/li[@Class="RoomRequirement_ThingCount"]</xpath>
+      <xpath>/Defs/RoyalTitleDef[defName="Esquire" or defName="Knight" or defName="Praetor" or defName="Baron" or defName="Count" or @Name="BaseEmpireTitleNPC"]/throneRoomRequirements//li[5]</xpath>
       <value>
         <li Class="RoomRequirement_ThingCountAnyOf">
           <things>
