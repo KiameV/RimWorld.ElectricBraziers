@@ -13,7 +13,7 @@
       <WorkToBuild>100</WorkToBuild>
       <Flammability>0</Flammability>
       <Mass>15</Mass>
-    </statBases>
+      <MeditationFocusStrength>0.0</MeditationFocusStrength>    </statBases>
     <selectable>true</selectable>
     <designationCategory>Furniture</designationCategory>
     <uiIconOffset>(0, -0.04)</uiIconOffset>
@@ -23,9 +23,13 @@
       <li>Stony</li>
     </stuffCategories>
     <costStuffCount>50</costStuffCount>
+    <costList>
+      <Steel>10</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
     <placeWorkers>
       <li>PlaceWorker_Heater</li>
-    </placeWorkers>
+      <li>PlaceWorker_MeditationOffsetBuildingsNear</li>    </placeWorkers>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <comps>
       <li Class="CompProperties_Power">
@@ -39,19 +43,41 @@
       </li>
       <li Class="CompProperties_HeatPusher">
         <compClass>CompHeatPusherPowered</compClass>
-        <heatPerSecond>3.5</heatPerSecond>
-        <heatPushMaxTemperature>23</heatPushMaxTemperature>
+        <heatPerSecond>2</heatPerSecond>
+        <heatPushMaxTemperature>20</heatPushMaxTemperature>
       </li>
-      <li Class="CompProperties_PoweredFireOverlay">
+      <li Class="EB.CompProperties_PoweredFireOverlay">
         <fireSize>1</fireSize>
         <offset>(0,0,0.18)</offset>
       </li>
       <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes><li>Flame</li></focusTypes>
+        <offsets>
+          <li Class="FocusStrengthOffset_Lit">
+            <offset>0.13</offset>
+          </li>
+          <li Class="FocusStrengthOffset_BuildingDefsLit">
+            <defs>
+              <li>Campfire</li>
+              <li>TorchLamp</li>
+              <li>Brazier</li>
+			  <li>ElectricBrazier</li>
+            </defs>
+            <offsetPerBuilding>0.02</offsetPerBuilding>
+            <radius>9.9</radius>
+            <maxBuildings>8</maxBuildings>
+            <explanationKey>MeditationFocusPerFlame</explanationKey>
+            <explanationKeyAbstract>MeditationFocusPerFlameAbstract</explanationKeyAbstract>
+          </li>
+        </offsets>
+      </li>
     </comps>
     <canOverlapZones>false</canOverlapZones>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
-    <pathCost>50</pathCost>
+    <pathCost>40</pathCost>
     <rotatable>false</rotatable>
     <researchPrerequisites>
       <li>ComplexFurniture</li>
