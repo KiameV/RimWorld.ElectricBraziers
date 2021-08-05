@@ -2,6 +2,7 @@
 using RimWorld;
 using System;
 using System.Reflection;
+using System.Text;
 using Verse;
 
 namespace EB
@@ -49,6 +50,39 @@ namespace EB
                     }
                 }
             }
+
+            // Vanilla Royalty Support
+            bool patched = false;
+            foreach(var d in DefDatabase<RoyalTitleDef>.AllDefs)
+            {
+                if (d.bedroomRequirements != null)
+                {
+                    foreach (var c in d?.bedroomRequirements)
+                        if (c is RoomRequirement_ThingAnyOf rr && AddElectricBrazier(rr))
+                            patched = true;
+                }
+                if (d.throneRoomRequirements != null)
+                {
+                    foreach (var c in d?.throneRoomRequirements)
+                        if (c is RoomRequirement_ThingAnyOf rr && AddElectricBrazier(rr))
+                            patched = true;
+
+                }
+            }
+            if (patched)
+            {
+                Log.Message("[Electric Braziers] Successfully patched Vanially Expanded - Royaltys Patch");
+            }
+        }
+
+        private static bool AddElectricBrazier(RoomRequirement_ThingAnyOf rr)
+        {
+            if (rr.things.Contains(DefOf.Brazier))
+            {
+                rr.things.Add(DefOf.ElectricBrazier);
+                return true;
+            }
+            return false;
         }
     }
 
