@@ -8,7 +8,9 @@
   <packageId>electricbraziers.kv.rw</packageId>
 	<description>Provides an Electric Brazier that satisfies throne room requirements. 
   Requires Royalty DLC installed. 
-  May not work for custom Empires and Royalty Titles.</description>
+  May not work for custom Empires and Royalty Titles.
+  
+  Thanks to Solarius Scorch for the texture work.</description>
   <url>https://github.com/KiameV/RimWorld.ElectricBraziers/releases/tag/1.3</url>
   <loadAfter>
     <li>Ludeon.RimWorld</li>

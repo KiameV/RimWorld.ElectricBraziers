@@ -52,8 +52,8 @@ namespace EB
                         base.parent.Map.glowGrid.RegisterGlower(this);
                         base.parent.Map.mapDrawer.MapMeshDirty(base.parent.Position, MapMeshFlag.Things);
                     },
-                    defaultLabel = "RimFridge.ToggleGlowColor".Translate(),
-                    defaultDesc = "RimFridge.ToggleGlowColorDesc".Translate(),
+                    defaultLabel = "EB.ToggleGlowColor".Translate(),
+                    defaultDesc = "EB.ToggleGlowColorDesc".Translate(),
                     icon = icon
                 };
             }

@@ -10,6 +10,7 @@ namespace EB
     [StaticConstructorOnStartup]
     class Main
     {
+        public static GraphicData ElectricBrazierGraphicDataBackup = null;
         public static Pawn ChoicesForPawn = null;
 
         static Main()
@@ -73,6 +74,8 @@ namespace EB
             {
                 Log.Message("[Electric Braziers] Successfully patched Vanially Expanded - Royaltys Patch");
             }
+
+            ElectricBrazierGraphicDataBackup = DefOf.ElectricBrazier.graphicData;
         }
 
         private static bool AddElectricBrazier(RoomRequirement_ThingAnyOf rr)
